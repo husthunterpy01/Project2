@@ -43,10 +43,10 @@ AVR là một họ vi điều khiển do hãng Atmel sản xuất được giớ
    - Mức logic các cổng I/P: TTL (5V)
    - Điện áp tương tự các chân ADC : từ 0 đến + 5V
    - Loại VĐK được hỗ trợ : Atmega32, 16,...
-   - Cổng I/O mở rộng: 4 giắc cắm (loại 8 chân _ ứng với 4 Port( 8 bit mỗi Port)
+   - Cổng I/O mở rộng: 4 giắc cắm (loại 8 chân ứng với 4 Port( 8 bit mỗi Port)
    - Hỗ trợ màn hình LCD : dạng text, giao tiếp 8 bit hoặc 4 bit
    - Hỗ tợ mô đun USB: UART-USB hay COM-USB ( mức 5VDC)
-   - Xung nhịp tích hợp sẵn : thạc anh 8MHz
+   - Xung nhịp tích hợp sẵn : thạch anh 8MHz
 ## 1.2 Atmega 16
 ### 1.2.1 Giới thiệu tổng quan về Atmega16
 - Atmega16 là bộ vi điều khiển công suất thấp 40 chân được phát triển bằng công nghệ CMOS. CMOS là một công nghệ tiên tiến được sử dụng churt yếu để phát hiện các mạch tích hợp. Nó có mức tiêu thụi điện năng thấp và khả năng chống nhiễu cao. Atmega16 là bộ điều khiển 8-bit dựa trên kiến trúc RISC tiến tiến AVR như đã đề cập ở trên. Nó là một máy tính chip đơn đi kèm với CPU,ROM, RAM,EEPROM, bộ định thời, bộ đếm, ADC và bốn cổng 8-bit được gọi là PORTA, PORTB, PORTC, PORTD trong đó mỗi cổng gồm 8 chân I/O.
