@@ -27,7 +27,7 @@ AVR là một họ vi điều khiển do hãng Atmel sản xuất được giớ
 | 14 | Jumper dây LED đơn | Cho phép hoặc vô hiệu hóa dây LED đơn | 
 | 15 | LED 7 thanh | Hiển thị số 0-9 và một vài ký tự do người dùng định nghĩa | 
 | 16 | Jumper LED 7 thanh | Cho phép hoặc vô hiệu hóa LED 7 thanh | 
-| 17 | Giắc cắm LCD | Kết nối màn hình L:CD dạng text có bán sẵn. Loại phù hợp nhất là 1602 ( 16 ký tự x 2 dòng ) | 
+| 17 | Giắc cắm LCD | Kết nối màn hình LCD dạng text có bán sẵn. Loại phù hợp nhất là 1602 ( 16 ký tự x 2 dòng ) | 
 | 18 | Biến trở vi chính | Điều chỉnh trơn và liên tục, từ 0 đến 5VDC, mức điện áp tại đầu vào AD0 của bọ ADC (chân PA0) |
 | 19 | Giắc UART-USB | Kết nối mô đun chuyển đổi UART-USB có bán sẵn |
 
