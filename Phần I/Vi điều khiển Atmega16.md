@@ -36,7 +36,7 @@ AVR là một họ vi điều khiển do hãng Atmel sản xuất được giớ
     - Tiêu chuẩn : 9 -12 VDC
     -  Giới hạn: 7-18 VDC
    - Dòng điện tiêu thụ :
-    - Không có mô đun mở rộng, topanf bộ LED chỉ thị I/O tắt : 18mA
+    - Không có mô đun mở rộng, toàn bộ LED chỉ thị I/O tắt : 18mA
     - Khi có LCD và mô đun USB, các LED chỉ thị I/O bị vô hiệu hóa : 22mA
     - Khi có LCD và mô đung USB, toàn bộ LED chỉ thị I/O sáng : 80 mA 
    - Mạch có khả năng tự bảo vệ khi bị lắp ngược cực tính nguồn
