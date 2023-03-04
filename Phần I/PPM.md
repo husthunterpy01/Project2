@@ -8,7 +8,13 @@ PPM là đơn vị vô cùng nhỏ nên thường dùng để đo các loại kh
 ## Ứng dụng PPM trong việc nhận diện khí
 - Dựa trên ý nghĩa cũng như độ thuận lợi của việc sử dụng đơn vị này, chúng em đã sử dụng ppm như 1 đơn vị để xác định nồng độ 1 loại khí nhất định có trong không khí, từ
 đó có thể xác định được đó là loại khí nào
-- Việc đo nồng độ khí dựa trên 1 số các thông số đã được cho trươc và được thực hiện trong các môi trường khác nhau để chúng ta có thể nhận diện được loại khí đang tồn tại
-xung quanh môi trường chúng ta. Thông qua một số nguồn khảo sát, chúng em đã tổng hợp được một vài thông số nồng độ của những loại khí khác nhau như bảng sau:
+- Việc đo nồng độ khí dựa trên 1 số các thông số đã được cho trươc và được thực hiện trong các môi trường khác nhau để chúng ta có thể nhận diện được loại khí đang tồn tại xung quanh môi trường chúng ta. Thông qua một số nguồn khảo sát, chúng em đã tổng hợp được một vài thông số nồng độ của những loại khí khác nhau như bảng sau:
+
+|Tên loại khí | Nồng độ PPM|
+|----|----|
+|CO2| 1000|
+|CO| 50 - 100 |
+|CH4| 12000| 
+
 - Dựa vào bảng trên chúng em sẽ sử dụng để xác định được loại khí đang tồn tại ở môi trường xung quanh thiết bị. Kết quả về nồng độ PPM và 1 số tên loại khí dược hiển thị 
-lên màn LCD.
+lên màn LCD. Điều kiện mặc định ở đây là điều kiện ngoài trời.
