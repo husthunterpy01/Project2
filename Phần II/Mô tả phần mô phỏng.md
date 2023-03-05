@@ -3,6 +3,16 @@
 ![image](https://user-images.githubusercontent.com/96186749/208045531-3708a54d-2b53-45ba-a46d-31619295b010.png)
 **Sau khi hiệu chỉnh và cài đặt code thông qua phần mềm CodeVisionAVR, mạch đã hoạt động được đúng chức năng mà nhóm đã đề ra**
 ![image](https://user-images.githubusercontent.com/96186749/216868435-1db38203-9bdc-4231-9a8e-2c75ed73dc39.png)
+
+![image](https://user-images.githubusercontent.com/96186749/222940385-60dfa5c3-585b-4e74-a0bd-44fb7798c413.png)
+
+
+- Phần chức năng sau khi đã hoàn thiện sẽ hoạt động theo 3 mức tương đương với 3 mức không khí là: tốt, trung bình và xấu tương ứng với lượng ppm.
+- Trong đó nếu lượng ppm nhỏ hơn 600 sẽ được coi là tốt, phần đèn tím sẽ được bật lên và màn hình hiển thị **"GOOD"**. Nếu ppm thuộc khoảng từ 600 đến 800 thì chất lượng không khí được coi là trung bình và màn hình sẽ hiển thị là **"AVG"**. Ngược lại nếu ppm > 800 thì chất lượng không khí sẽ được coi là xấu và màn hình hiển thị là **"BAD"**.
+- Phần chất lượng không khí dựa trên nguồn: [Air quality](https://www.co2radical.com.au/aranet4-what-is-a-normal-co2-level) với tiêu chuẩn không khí được lấy theo nồng độ CO2 trong phòng.
+
+![image](https://user-images.githubusercontent.com/96186749/222940477-1310e3d9-d325-45b3-b434-959c5f5b0dae.png)
+
 The full simulation is in this [video](https://husteduvn-my.sharepoint.com/:v:/g/personal/minh_dtn193231_sis_hust_edu_vn/EeMyHEep7lxNtSg5wuvAWPUBkEjLh8_qN7npxQnsix0TAw?e=SZu1PP)
 ## Altium
 ![image](https://user-images.githubusercontent.com/124513040/216827906-8d130ae6-6e18-4cdf-9bac-a1a5a94ed649.png)
