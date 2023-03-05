@@ -46,3 +46,87 @@ while (1)
 }    
 }
 ```
+Phần code trên để xác định được lượng ppm mà sensor đo được. Để có thể thực hiện các chức năng như trên, bọn em đã có thêm phần code bổ sung như sau:
+```
+#include <mega16.h>
+#include <string.h>
+#include <math.h>
+#include <stdio.h>
+#include <delay.h>
+
+// Alphanumeric LCD functions
+#include <alcd.h>  //chen thu vien lcd
+
+// Declare your global variables here
+
+//------------------------------------------------------------------
+// Voltage Reference: AREF pin
+#define ADC_VREF_TYPE ((0<<REFS1) | (0<<REFS0) | (0<<ADLAR))
+//------------------------------------------------------------------
+// Read the AD conversion result
+unsigned int read_adc(unsigned char adc_input)//doc gia tri adc
+{
+    ADMUX=adc_input | ADC_VREF_TYPE;
+    // Delay needed for the stabilization of the ADC input voltage
+    delay_us(10);
+    // Start the AD conversion
+    ADCSRA|=(1<<ADSC);
+    // Wait for the AD conversion to complete
+    while ((ADCSRA & (1<<ADIF))==0);
+    ADCSRA|=(1<<ADIF);
+    return ADCW;
+}
+//------------------------------------------------------------------
+void main(void)
+{
+unsigned int gas;
+char arr[15];
+// ADC initialization
+// ADC Clock frequency: 125.000 kHz
+// ADC Voltage Reference: AREF pin
+// ADC Auto Trigger Source: Free Running
+ADMUX=ADC_VREF_TYPE;
+ADCSRA=(1<<ADEN) | (0<<ADSC) | (1<<ADATE) | (0<<ADIF) | (0<<ADIE) | (1<<ADPS2) | (1<<ADPS1) | (0<<ADPS0);
+SFIOR=(0<<ADTS2) | (0<<ADTS1) | (0<<ADTS0);
+lcd_init(16); //khoi dong lcd
+DDRA.0 = 0;
+while (1)
+      { 
+      // Place your code here
+         gas = read_adc(0);//du lieu gas
+         sprintf(arr,"Gas:%02d PPM",gas);
+         PORTD.4=1;
+         lcd_gotoxy(0,1);
+         lcd_puts(arr);  
+      if(gas>=0 && gas<=600)
+      {
+      // Purple light for good
+      PORTD.5 = 1; 
+      PORTD.4 = 0;
+      PORTD.6 = 0;
+      lcd_gotoxy(0,0);
+      lcd_puts("GOOD");
+      delay_ms(100);
+      }
+      else if (gas>600 && gas<=800)
+      {
+      // Yellow for average
+      PORTD.6 = 1;
+      PORTD.5 = 0; 
+      PORTD.4 = 0;   
+      lcd_gotoxy(0,0);
+      lcd_puts("AVG ");
+      delay_ms(100);
+      }
+      else { 
+      // Red for bad
+      PORTD.4= 1;
+      PORTD.5 = 0;
+      PORTD.6 = 0;
+      lcd_gotoxy(0,0);
+      lcd_puts("BAD ");
+      delay_ms(100); 
+      }
+}    
+}
+```
